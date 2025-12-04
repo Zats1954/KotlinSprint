@@ -1,15 +1,11 @@
 package  lesson_1
 
-
+const val ALL_SECONDS: Short = 6480
 fun main() {
-    val allSeconds: Short = 6480
-    val minutes: Short
-    val hours: Short
-    val seconds: Short
+    
+    val hours = (ALL_SECONDS / 3600).toShort()
+    val minutes = ((ALL_SECONDS - hours * 3600) / 60).toShort()
+    val seconds = (ALL_SECONDS - hours * 3600 - minutes * 60).toShort()
 
-    hours = (allSeconds/3600).toShort()
-        .also{minutes=((allSeconds - it*3600)/60).toShort()
-            .also{it1 -> seconds = (allSeconds - it*3600 - it1*60).toShort()}}
-    println( "%02d".format(hours) + ":" + "%02d".format(minutes) + ":" +"%02d".format(seconds))
-
+    println( "%02d:%02d:%02d".format(hours,minutes,seconds))
 }
