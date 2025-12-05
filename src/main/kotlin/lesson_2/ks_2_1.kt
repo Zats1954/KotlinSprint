@@ -1,5 +1,7 @@
 package lesson_2
 
+import kotlin.random.Random
+
 fun main() {
     val pupilsMark =  intArrayOf(3,4,3,5)
     var sum = 0
