@@ -2,8 +2,9 @@ package lesson_2
 
 const val TIME_DIVIDER = 60
 const val DAY_DIVIDER = 24
+
 fun main() {
-    val timeDeparture  = "9:39"
+    val timeDeparture = "9:39"
     val timeTravel = 457
 
     val timeArrive = timeDeparture.split(":")
@@ -14,5 +15,5 @@ fun main() {
 
     val minuteArrive = timeArrive % TIME_DIVIDER
 
-    println( "Час и минута прибытия поезда %02d:%02d".format(hourArrive,minuteArrive))
+    println("Час и минута прибытия поезда %02d:%02d".format(hourArrive,minuteArrive))
 }
